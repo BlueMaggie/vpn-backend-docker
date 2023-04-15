@@ -1,0 +1,11 @@
+{
+"DOMAIN":"example.com",
+"MAX_CLIENTS_NUM":3,
+"CA_NAME":"",
+"CA_KEY_NAME":"",
+"VER_TEST":true,
+"REQ_LINK_INTERVAL":5,
+"LINK_EXP_TIME":120,
+"WX_APPID":"" ,
+"WX_APPSECRET":""
+}

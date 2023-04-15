@@ -1,0 +1,30 @@
+version: '3'
+
+services:
+  nginx:
+    image: nginx
+    container_name: nginx_for_vpn
+    volumes:
+      -  ./volume/nginx/conf.d:/etc/nginx/conf.d
+      -  ./volume/nginx/ssl.d:/etc/nginx/ssl.d
+    ports:
+      - "80:80"
+      - "443:443"
+    depends_on:
+      - node
+  node:
+    image: node:18.15
+    container_name: node_for_vpn
+    volumes:
+      - ./volume/node/:/root/vpn
+    command:
+      /bin/sh -c "sleep 10 && cd /root/vpn && chmod u+x init.sh && ./init.sh"
+    depends_on:
+     - mysql 
+  mysql:
+    image: mysql
+    container_name: mysql_for_vpn
+    environment: 
+      MYSQL_ROOT_PASSWORD: 021114zzZZ
+    ports:
+    - "3306:3306"
