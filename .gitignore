@@ -1,3 +1,4 @@
 /volume/node/node_modules
 /volume/mysql
 /volume/node/src/public
+/volume/node/src/views
