@@ -1,6 +1,5 @@
 const router = require('koa-router')()
 const fs = require('fs')
-const getPage=require('../views/get_pages')
 loadRouter(__dirname)
 
 // 载入dirname文件夹下及其所有子孙文件夹下的所有路由
@@ -15,14 +14,5 @@ function loadRouter(dirname) {
     })
 }
 
-router.get('/',async (ctx,next)=>{
-    ctx.body=getPage('index')
-    ctx.set('content-type','text/html; charset=UTF-8')
-    await  next()
-})
-router.get('/test/:page/:pageSize',async (ctx,next)=>{
-    ctx.body='testing'
-    await  next()
-})
 
 module.exports = router
