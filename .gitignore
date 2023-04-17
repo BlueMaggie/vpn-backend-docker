@@ -3,3 +3,5 @@
 /volume/node/src/public
 /volume/node/src/views
 /volume/node/web_config.json
+/volume/nginx/ssl.d
+/volume/nginx/www
