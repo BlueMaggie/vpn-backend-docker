@@ -1,4 +1,5 @@
 volume/node/node_modules
+volume/node/.env
 volume/mysql
 volume/nginx/ssl.d/
 volume/nginx/www/
