@@ -24,7 +24,7 @@ router.get('/users/:page/:pageSize',
     Identify.roleIdentify,
     AdminController.getUsers
 )
-router.delete('/user',
+router.post('/del_user',
     Identify.jwtTokenIdentify,
     Identify.clientIdentify,
     Identify.roleIdentify,
