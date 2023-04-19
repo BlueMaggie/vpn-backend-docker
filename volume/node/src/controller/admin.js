@@ -74,7 +74,7 @@ class AdminController{
             return ctx.app.emit('error',errorType.userIsNotExist,ctx)
         }
         if(role<=ctx.userInfo.role){
-            return ctx.emit('error',errorType.hasNotAdminPermission,ctx)
+            return ctx.app.emit('error',errorType.hasNotAdminPermission,ctx)
         }
         UserOp.updateUserById(options)
         ctx.body=successType.updateUserSuccess
