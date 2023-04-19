@@ -97,9 +97,10 @@ class FormatCheck{
         const  param  = ctx.request.body
         const schema = joi.object({
             id:joi.number().required(),
-            role:joi.number().max(3).min(1).required(),
+            role:joi.number().max(3).min(1),
             email:joi.string().max(32).pattern(/^\w+@(\w+\.)\w+$/),
-            name:joi.string().max(20)
+            name:joi.string().max(20),
+            boss:joi.number().min(1)
         })
         try {
             // 如果验证成功，validateAsync()的返回值就是验证的参数对象
