@@ -66,9 +66,9 @@ class AdminController{
         let {id}=ctx.request.body
         let res
         if(userInfo.role==1){//超管
-            res=await UserOp.queryUser({id,role})
+            res=await UserOp.queryUser({id})
         }else{//普通管理员
-            res=await UserOp.queryUser({id,role,boss:userInfo.id})
+            res=await UserOp.queryUser({id,boss:userInfo.id})
         }
         if(res==null){
             return ctx.app.emit('error',errorType.userIsNotExist,ctx)
