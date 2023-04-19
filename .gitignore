@@ -1,6 +1,5 @@
 volume/node/node_modules
 volume/mysql
-volume/node/src/public
-volume/node/web_config.json
 volume/nginx/ssl.d/
 volume/nginx/www/
+volume/node/web_config.json
